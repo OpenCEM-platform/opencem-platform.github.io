@@ -1,0 +1,230 @@
+/* bg */
+.site-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../images/homepage_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4);
+}
+
+/* navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 0.8rem 1.5rem; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.nav-logo {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+}
+
+.logo:hover .nav-logo {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+    border-bottom: 2px solid #00b4d8;
+}
+
+/* content */
+.main-content {
+    max-width: 1200px;
+    margin: 100px auto 80px;
+    padding: 2rem;
+    color: white;
+    background: transparent;
+}
+.main-content {
+    position: relative;
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    line-height: 1.7;
+}
+
+.main-content h1, .main-content h2, .main-content h3 {
+    color: #e0e0e0;
+    margin: 2rem 0;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #00b4d8;
+}
+
+.main-content p {
+    color: #cfcfcf;
+    font-size: 1.1rem;
+    margin: 1.2rem 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.main-content ul {
+    padding-left: 2rem;
+    margin: 1.5rem 0;
+}
+
+.main-content li {
+    margin: 0.8rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid rgba(0, 180, 216, 0.5);
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin: 80px 20px 40px;
+        padding: 1.5rem;
+    }
+    
+    .main-content h1 {
+        font-size: 2rem;
+    }
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+}
+/* ================= homepage ================= */
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: -2rem -2rem 4rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, 
+        rgba(0, 180, 216, 0.15) 0%, 
+        rgba(15, 15, 15, 0) 60%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.03em;
+    margin: 0;
+    background: linear-gradient(135deg, #e0e0e0 30%, #00b4d8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: textReveal 1.5s ease-out;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, 
+        rgba(0, 180, 216, 0.15) 0%, 
+        rgba(0, 0, 0, 0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.additional-content {
+    column-count: 2;
+    column-gap: 3rem;
+    animation: fadeInUp 1s ease;
+}
+
+.additional-content p {
+    position: relative;
+    padding-left: 1.5rem;
+    break-inside: avoid;
+    margin-bottom: 1.2rem;
+}
+
+.additional-content p::before {
+    content: "✓";
+    color: #00b4d8;
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
+}
+
+@keyframes textReveal {
+    from {
+        opacity: 0;
+        transform: translateY(1.5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .additional-content {
+        column-count: 1;
+    }
+    
+    .hero::after {
+        width: 200%;
+        height: 200%;
+    }
+}
