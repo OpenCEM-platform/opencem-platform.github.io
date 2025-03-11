@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const isIndexPage = window.location.pathname.endsWith('/index.html') || 
                       window.location.pathname.endsWith('/');
     
-    // 定义导航项
+    // define navbar
     const navItems = [
         { text: 'Home', href: `${isIndexPage ? '' : '../'}index.html` },
         { text: 'Introduction', href: `${isIndexPage ? 'pages/' : ''}introduction.html` },
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: 'Contact us', href: `${isIndexPage ? 'pages/' : ''}contact.html` }
     ];
 
-    // 生成导航HTML
+    // navbar html
     const navHTML = `
     <nav class="navbar">
         <div class="nav-container">
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.body.insertAdjacentHTML('afterbegin', navHTML);
 
-    // 添加active类到当前页面的导航项
     const currentPath = window.location.pathname;
     document.querySelectorAll('.nav-link').forEach(link => {
         if (link.href === window.location.href) {
