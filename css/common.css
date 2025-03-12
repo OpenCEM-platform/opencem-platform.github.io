@@ -1,3 +1,4 @@
+/* ================= common style ================= */
 /* bg */
 .site-bg {
     position: fixed;
@@ -12,31 +13,44 @@
     filter: brightness(0.4);
 }
 
-/* navbar */
+/* ================= navbar style ================= */
 .navbar {
     background: rgba(0, 0, 0, 0.95);
-    padding: 0.8rem 1.5rem; 
+    padding: 0.8rem 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     backdrop-filter: blur(8px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 100px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-/* Logo */
+.nav-container::-webkit-scrollbar {
+    height: 3px;
+}
+
+.nav-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
 .nav-logo {
     height: 60px;
     width: auto;
     transition: transform 0.3s ease;
     border-radius: 4px;
+    flex-shrink: 0;
 }
 
 .logo:hover .nav-logo {
@@ -46,8 +60,12 @@
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
     list-style: none;
+    padding-bottom: 10px;
+    margin: 0;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .nav-link {
@@ -55,27 +73,27 @@
     text-decoration: none;
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
-    transition: background 0.3s;
-    font-size: 0.9rem;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+    display: inline-block;
+    position: relative;
 }
 
 .nav-link:hover {
     background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
 }
 
 .active {
     border-bottom: 2px solid #00b4d8;
 }
 
-/* content */
+/* ================= main content style ================= */
 .main-content {
     max-width: 1200px;
     margin: 100px auto 80px;
     padding: 2rem;
     color: white;
-    background: transparent;
-}
-.main-content {
     position: relative;
     background: rgba(15, 15, 15, 0.85);
     backdrop-filter: blur(12px);
@@ -84,53 +102,6 @@
     line-height: 1.7;
 }
 
-.main-content h1, .main-content h2, .main-content h3 {
-    color: #e0e0e0;
-    margin: 2rem 0;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-.main-content h1 {
-    font-size: 2.5rem;
-    border-bottom: 2px solid #00b4d8;
-}
-
-.main-content p {
-    color: #cfcfcf;
-    font-size: 1.1rem;
-    margin: 1.2rem 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.main-content ul {
-    padding-left: 2rem;
-    margin: 1.5rem 0;
-}
-
-.main-content li {
-    margin: 0.8rem 0;
-    padding-left: 1rem;
-    border-left: 3px solid rgba(0, 180, 216, 0.5);
-}
-
-@media (max-width: 768px) {
-    .main-content {
-        margin: 80px 20px 40px;
-        padding: 1.5rem;
-    }
-    
-    .main-content h1 {
-        font-size: 2rem;
-    }
-}
-
-section {
-    margin-bottom: 3rem;
-    padding: 1.5rem;
-}
-/* ================= homepage ================= */
-/* Hero */
 .hero {
     text-align: center;
     padding: 4rem 2rem;
@@ -151,8 +122,6 @@ section {
     background-clip: text;
     color: transparent;
     animation: textReveal 1.5s ease-out;
-    position: relative;
-    z-index: 1;
 }
 
 .hero::after {
@@ -191,29 +160,25 @@ section {
     text-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
 }
 
-@keyframes textReveal {
-    from {
-        opacity: 0;
-        transform: translateY(1.5rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(2rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.6rem 0;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+        gap: 1.5rem;
+    }
+    
+    .nav-logo {
+        height: 50px;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
         line-height: 1.2;
@@ -227,4 +192,19 @@ section {
         width: 200%;
         height: 200%;
     }
+    
+    .main-content {
+        margin: 80px 15px 40px;
+        padding: 1.5rem;
+    }
+}
+
+@keyframes textReveal {
+    from { opacity: 0; transform: translateY(1.5rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(2rem); }
+    to { opacity: 1; transform: translateY(0); }
 }
