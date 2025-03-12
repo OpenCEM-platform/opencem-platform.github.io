@@ -122,6 +122,8 @@
     background-clip: text;
     color: transparent;
     animation: textReveal 1.5s ease-out;
+    position: relative;
+    padding-bottom: 1.2rem;
 }
 
 .hero::after {
@@ -136,6 +138,31 @@
         rgba(0, 0, 0, 0) 70%);
     transform: translate(-50%, -50%);
     z-index: 0;
+}
+
+.hero h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: #00b4d8;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 180, 216, 0.3);
+    animation: lineExpand 0.8s ease-out forwards;
+}
+
+@keyframes lineExpand {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 1000px;
+        opacity: 1;
+    }
 }
 
 .additional-content {
@@ -182,6 +209,7 @@
     .hero h1 {
         font-size: 2.5rem;
         line-height: 1.2;
+        padding-bottom: 1rem;
     }
     
     .additional-content {
@@ -196,6 +224,10 @@
     .main-content {
         margin: 80px 15px 40px;
         padding: 1.5rem;
+    }
+    .hero h1::after {
+        width: 45px;
+        height: 1.5px;
     }
 }
 
