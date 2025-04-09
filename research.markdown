@@ -1,6 +1,6 @@
 ---
 layout: default
-title: OpenCEM Introduction
+title: OpenCEM Research
 ---
 
 The Open In-Context Energy Management Platform (OpenCEM) will provide
