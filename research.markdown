@@ -12,7 +12,7 @@ title: OpenCEM Research
 <center><font size=20>OpenCEM Algorithms</font></center>
 
 <div style="border: 1px solid #ccc; padding: 1em; border-radius: 4px;">
-**InstructMPC**
+<font size=10>**InstructMPC**</font>
 
 **InstructMPC** is a novel framework that enhances traditional Model Predictive Control (MPC) by integrating real-time human instructions through Large Language Models (LLMs). Its key innovation is a Language-to-Distribution (L2D) module, which translates contextual information—such as events, weather, and user-generated data—into predictive disturbance trajectories. These trajectories are then incorporated into the MPC optimization process.
 
