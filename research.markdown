@@ -2,7 +2,7 @@
 layout: default
 title: OpenCEM Research
 ---
-<center>OpenCEM Data and Simulator</center>
+<center><font size=25>OpenCEM Data and Simulator</font></center>
 
 
 
