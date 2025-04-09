@@ -2,6 +2,12 @@
 layout: default
 title: OpenCEM Research
 ---
+<center>OpenCEM Data and Simulator</center>
+
+
+
+
+<center>OpenCEM Algorithms</center>
 
 The Open In-Context Energy Management Platform (OpenCEM) will provide
 a rich, open data set for prediction models and control algorithms
