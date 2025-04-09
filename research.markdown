@@ -4,7 +4,7 @@ title: OpenCEM Research
 ---
 ## OpenCEM Data and Simulator
 
-### OpenCEM Algorithms
+## OpenCEM Algorithms
 
 #### InstructMPC
 
