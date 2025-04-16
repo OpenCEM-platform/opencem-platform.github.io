@@ -15,7 +15,7 @@ The installation is currently underway and scheduled to be completed in Spring 2
   * Event data
   * User-generated context
   * Local news and weather reports.
-* A simulator to evaluate in-context learning models, contro algorithms and context designs.
+* A simulator to evaluate in-context learning models, control algorithms and context designs.
 
 The information will be made available through a public API.
 
