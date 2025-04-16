@@ -3,6 +3,8 @@ title: OpenCEM Demo
 layout: demo
 ---
 
+  Design context to earn a spot on the [leaderboard](/leaderboard.html) and rewards.
+
   <!-- User Input Section -->
   <div class="input-section">
       <h2>Scenario Input</h2>
