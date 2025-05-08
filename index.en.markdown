@@ -2,6 +2,9 @@
 title: OpenCEM
 subtitle: Open In-Context Energy Management Platform
 layout: default
+permalink: /
+page_id: index
+lang: en
 ---
 
 The Open In-Context Energy Management Platform (OpenCEM) at the 

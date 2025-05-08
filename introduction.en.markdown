@@ -1,6 +1,9 @@
 ---
-layout: default
 title: OpenCEM Introduction
+layout: default
+permalink: /introduction
+page_id: introduction
+lang: en
 ---
 
 The Open In-Context Energy Management Platform (OpenCEM) will provide

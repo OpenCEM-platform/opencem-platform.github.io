@@ -1,6 +1,9 @@
 ---
 title: OpenCEM Demo
 layout: demo
+permalink: /demo
+page_id: demo
+lang: en
 ---
 
   Design context to earn a spot on the [leaderboard](/leaderboard.html) and rewards.

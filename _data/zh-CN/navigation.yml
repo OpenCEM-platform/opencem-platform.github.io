@@ -1,0 +1,14 @@
+icon: 🇨🇳
+pages:
+  - name: Home
+    link: /
+  - name: 介绍
+    link: /introduction.html
+  - name: 研究
+    link: /research.html
+  - name: 团队
+    link: /team.html
+  - name: 演示
+    link: /demo.html
+  - name: 联系我们
+    link: /contact.html

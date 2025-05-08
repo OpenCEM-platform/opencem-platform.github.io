@@ -1,7 +1,10 @@
 ---
-title: Contact
+title: OpenCEM
 subtitle: If you are interested in collaborating, please reach out to us.
 layout: default
+permalink: /contact
+page_id: contact
+lang: en
 ---
 
 The OpenCEM project is still in its setup stage and this website

@@ -4,10 +4,19 @@
       <img src="/assets/images/logo.jpg" alt="OpenCEM Logo" class="nav-logo">
     </a>
     <ul class="nav-links">
-      {% for item in site.data.navigation %}
+      {% for item in site.data[site.active_lang].navigation.pages %}
         <li><a href="{{ item.link }}" class="nav-link {% if page.url == item.link %}active{% endif %}">
           {{ item.name }}
         </a></li>
+      {% endfor %}
+      {% for tongue in site.languages %}
+       {% if tongue != site.active_lang %}
+        <a style="text-decoration:none;" 
+          {% static_href %}href="{% if tongue == site.default_lang %}{{site.baseurl}}{{page.url}}{% else %}{{site.baseurl}}/{{ tongue }}{{page.url}}{% endif %}"{% endstatic_href %} >
+          {{ site.data[tongue].navigation.icon }}
+        </a>
+        {%- if forloop.last == false -%}{{" "}}{{ site.langsep }}{%- endif -%}
+       {% endif %}
       {% endfor %}
     </ul>
   </div>

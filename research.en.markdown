@@ -1,6 +1,9 @@
 ---
-layout: default
 title: OpenCEM Research
+layout: default
+permalink: /research
+page_id: research
+lang: en
 ---
 ## OpenCEM Data and Simulator
 
