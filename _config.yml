@@ -3,13 +3,13 @@ email: tinkosebastianbartels@link.cuhk.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
   The Open In-Context Energy Management Platform (OpenCEM) at the Chinese University of Hongkong, Shenzhen aims to promote and enable in-context learning for prediction and decision models in renewable energy management through an open data set, simulator and public API.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: openCEM-platform
 languages: ["en", "zh-CN"]
 default_lang: "en"
 exclude_from_localization: ["assets"]
 url: https://opencem-platform.github.io/
 lang_from_path: true
+destination: docs
 
 theme: minima
 plugins:
