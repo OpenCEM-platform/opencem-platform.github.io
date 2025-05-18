@@ -19,3 +19,8 @@ for Summer 2025.
 Please find more details on the planned scope in our project 
 [introduction](/introduction.html) and the [demo](/demo.html) for 
 the processing of user-generated context.
+
+<img src="/assets/images/OpenCEM eng.jpg" 
+     alt="OpenCEM-overview" 
+     class="OpenCEM-overview"
+     style="max-width: 100%; height: auto;">
