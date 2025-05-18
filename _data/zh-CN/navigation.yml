@@ -1,6 +1,6 @@
 icon: 🇨🇳
 pages:
-  - name: Home
+  - name: 主页
     link: /
   - name: 介绍
     link: /introduction.html
