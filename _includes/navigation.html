@@ -11,10 +11,10 @@
       {% endfor %}
       {% for tongue in site.languages %}
        {% if tongue != site.active_lang %}
-        <a style="text-decoration:none;" 
+            <li><a class="nav-link"
           {% static_href %}href="{% if tongue == site.default_lang %}{{site.baseurl}}{{page.url}}{% else %}{{site.baseurl}}/{{ tongue }}{{page.url}}{% endif %}"{% endstatic_href %} >
           {{ site.data[tongue].navigation.icon }}
-        </a>
+            </a></li>
         {%- if forloop.last == false -%}{{" "}}{{ site.langsep }}{%- endif -%}
        {% endif %}
       {% endfor %}

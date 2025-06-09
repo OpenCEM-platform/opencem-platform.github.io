@@ -9,7 +9,7 @@ lang: en
 The Open In-Context Energy Management Platform (OpenCEM) will provide
 a rich, open data set for prediction models and control algorithms
 in energy management problems. This data set will include
-The installation is currently underway and scheduled to be completed in Spring 2025, with first data publications expected for Summer 2025.
+The installation is currently underway and scheduled to be completed in Summer 2025, with first data publications expected for Fall 2025.
 * Time series from a real-world, on-campus PV installation:
   * Generated power.
   * Battery levels.

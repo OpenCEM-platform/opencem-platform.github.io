@@ -10,6 +10,11 @@
     --card-shadow: 0 9px 32px rgba(0, 0, 0, 0.3);
 }
 
+a { color: lightskyblue; }
+a:visited { color: #6d4b8d; }
+a:hover { color: #ffffff; }
+a:active { color: #ff4040; text-decoration:none; font-weight:normal; }
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
@@ -87,7 +92,7 @@ body {
     white-space: nowrap;
 }
 
-.nav-link {
+a.nav-link {
     color: white;
     text-decoration: none;
     padding: 0.4rem 0.8rem;
@@ -98,7 +103,7 @@ body {
     position: relative;
 }
 
-.nav-link:hover {
+a.nav-link:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-1px);
 }
@@ -261,3 +266,4 @@ body {
     from { opacity: 0; transform: translateY(2rem); }
     to { opacity: 1; transform: translateY(0); }
 }
+

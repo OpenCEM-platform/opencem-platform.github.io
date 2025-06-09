@@ -11,7 +11,7 @@ lang: zh-CN
 
 更多详细信息请参阅我们的项目[介绍](/zh-CN/introduction.html)和用户[演示](/zh-CN/demo.html)。
 
-<img src="/assets/images/OpenCEM chi.jpg"
+<img src="/assets/images/OpenCEM.zh-CN.svg"
      alt="OpenCEM-overview"
      class="OpenCEM-overview"
      style="max-width: 100%; height: auto;">
