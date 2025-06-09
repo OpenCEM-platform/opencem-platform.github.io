@@ -687,36 +687,36 @@
         </g>
         <g id="g130" transform="translate(724.3728,406.3699)"/>
         <g id="g132" transform="translate(737.9108,376.6699)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text136"><tspan x="0 18.200001 31.416 41.216 54.431999 66.052002 80.192001" y="0" id="tspan134">Dataset</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text136"><tspan x="0 18.200001 31.416 41.216 54.431999 66.052002 80.192001" y="0" id="tspan134">数据集</tspan></text>
         </g>
       </g>
     </g>
     <g id="g138">
       <g id="g140" clip-path="url(#clipPath144)">
         <g id="g146" transform="translate(438.0355,780.1781)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text150"><tspan x="0 18.15 35.838001 52.338001 63.756001 80.454002 96.360001 105.039 123.849 141.47099 159.159 170.709 182.127 199.74899" y="0" id="tspan148">Energy Control</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text150"><tspan x="0 18.15 35.838001 52.338001 63.756001 80.454002 96.360001 105.039 123.849 141.47099 159.159 170.709 182.127 199.74899" y="0" id="tspan148">能源控制</tspan></text>
         </g>
       </g>
     </g>
     <g id="g152">
       <g id="g154" clip-path="url(#clipPath158)">
         <g id="g160" transform="translate(471.8095,623.7389)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text164"><tspan x="0 14.14 28.280001 50.568001 62.664001 80.863998 90.552002 96.907997 110.684 124.684" y="0" id="tspan162">LLM-Driven</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text164"><tspan x="0 14.14 28.280001 50.568001 62.664001 80.863998 90.552002 96.907997 110.684 124.684" y="0" id="tspan162">基于大语言模型</tspan></text>
         </g>
         <g id="g166" transform="translate(471.8095,623.7389)"/>
         <g id="g168" transform="translate(478.1795,594.0389)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text172"><tspan x="0 7.2519999 22.26 34.355999 50.316002 65.267998 80.276001 90.075996 103.796 117.152 126.952" y="0" id="tspan170">In-Context </tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text172"><tspan x="0 7.2519999 22.26 34.355999 50.316002 65.267998 80.276001 90.075996 103.796 117.152 126.952" y="0" id="tspan170">（LLM）的上下文</tspan></text>
         </g>
         <g id="g174" transform="translate(478.1795,594.0389)"/>
         <g id="g176" transform="translate(436.7395,564.3389)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text180"><tspan x="0 15.96 30.912001 45.919998 55.720001 65.407997 80.360001 86.716003 94.080002 111.02 117.376 131.54401 146.496 156.18401 162.53999 172.34 187.34801" y="0" id="tspan178">Control Algorithm</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text180"><tspan x="0 15.96 30.912001 45.919998 55.720001 65.407997 80.360001 86.716003 94.080002 111.02 117.376 131.54401 146.496 156.18401 162.53999 172.34 187.34801" y="0" id="tspan178">驱动控制算法</tspan></text>
         </g>
       </g>
     </g>
     <g id="g182">
       <g id="g184" clip-path="url(#clipPath188)">
         <g id="g190" transform="translate(405.8605,406.1516)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text194"><tspan x="0 18.249001 35.937 51.842999 65.538002 73.028999 87.878998 103.455 110.946 119.625 128.172 145.86 159.55499 171.105 186.681 194.172 201.66299 217.239 228.789 236.28 253.90199" y="0" id="tspan192">Physical Installation</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text194"><tspan x="0 18.249001 35.937 51.842999 65.538002 73.028999 87.878998 103.455 110.946 119.625 128.172 145.86 159.55499 171.105 186.681 194.172 201.66299 217.239 228.789 236.28 253.90199" y="0" id="tspan192">物理设备</tspan></text>
         </g>
       </g>
     </g>
@@ -807,21 +807,21 @@
     <g id="g974">
       <g id="g976" clip-path="url(#clipPath980)">
         <g id="g982" transform="translate(422.1922,271.5385)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text986"><tspan x="0 15.764" y="0" id="tspan984">PV</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text986"><tspan x="0 15.764" y="0" id="tspan984">太阳能光伏板</tspan>V</text>
         </g>
       </g>
     </g>
     <g id="g988">
       <g id="g990" clip-path="url(#clipPath994)">
         <g id="g996" transform="translate(498.5914,271.5385)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1000"><tspan x="0 16.408001 29.624001 39.144001 48.944 62.944 72.632004" y="0" id="tspan998">Battery</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1000"><tspan x="0 16.408001 29.624001 39.144001 48.944 62.944 72.632004" y="0" id="tspan998">电池</tspan></text>
         </g>
       </g>
     </g>
     <g id="g1002">
       <g id="g1004" clip-path="url(#clipPath1008)">
         <g id="g1010" transform="translate(620.3898,271.5385)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1014"><tspan x="0 17.724001 27.412001 33.768002" y="0" id="tspan1012">Grid</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1014"><tspan x="0 17.724001 27.412001 33.768002" y="0" id="tspan1012">电力网</tspan></text>
         </g>
       </g>
     </g>
@@ -846,28 +846,28 @@
     <g id="g1050">
       <g id="g1052" clip-path="url(#clipPath1056)">
         <g id="g1058" transform="translate(918.8986,406.1516)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1062"><tspan x="0 18.809999 36.431999 54.119999 65.669998 81.839996 97.581001 109.131 126.621 142.19701 149.688 158.367 179.817 195.39301 206.94299" y="0" id="tspan1060">Contextual Data</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1062"><tspan x="0 18.809999 36.431999 54.119999 65.669998 81.839996 97.581001 109.131 126.621 142.19701 149.688 158.367 179.817 195.39301 206.94299" y="0" id="tspan1060">上下文数据</tspan></text>
         </g>
       </g>
     </g>
     <g id="g1064">
       <g id="g1066" clip-path="url(#clipPath1070)">
         <g id="g1072" transform="translate(894.6508,271.5385)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1076"><tspan x="0 18.648001 32.647999 53.032001" y="0" id="tspan1074">News</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1076"><tspan x="0 18.648001 32.647999 53.032001" y="0" id="tspan1074">新闻</tspan></text>
         </g>
       </g>
     </g>
     <g id="g1078">
       <g id="g1080" clip-path="url(#clipPath1084)">
         <g id="g1086" transform="translate(990.9301,271.5385)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1090"><tspan x="0 14.252 28.028 42.028 57.035999 66.835999" y="0" id="tspan1088">Events</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1090"><tspan x="0 14.252 28.028 42.028 57.035999 66.835999" y="0" id="tspan1088">事件</tspan></text>
         </g>
       </g>
     </g>
     <g id="g1092">
       <g id="g1094" clip-path="url(#clipPath1098)">
         <g id="g1100" transform="translate(1086.058,271.5385)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1104"><tspan x="0 7.2519999 22.26 32.060001 46.060001 55.748001 70.755997 84.896004" y="0" id="tspan1102">Internet</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1104"><tspan x="0 7.2519999 22.26 32.060001 46.060001 55.748001 70.755997 84.896004" y="0" id="tspan1102">互联网</tspan></text>
         </g>
       </g>
     </g>
@@ -935,7 +935,7 @@
     <g id="g1894">
       <g id="g1896" clip-path="url(#clipPath1900)">
         <g id="g1902" transform="translate(1330.716,745.9797)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1906"><tspan x="0 21.450001 37.026001 48.576 64.152 72.831001 94.280998 110.781 118.272 125.763 141.99899 158.49899 169.91701" y="0" id="tspan1904">Data Delivery</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1906"><tspan x="0 21.450001 37.026001 48.576 64.152 72.831001 94.280998 110.781 118.272 125.763 141.99899 158.49899 169.91701" y="0" id="tspan1904">数据传输</tspan>y</text>
         </g>
       </g>
     </g>
@@ -959,7 +959,7 @@
     <g id="g1940">
       <g id="g1942" clip-path="url(#clipPath1946)">
         <g id="g1948" transform="translate(1330.4,702.1052)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1952"><tspan x="0 18.809999 36.431999 54.119999 65.669998 77.087997 94.709999 102.201 110.88 127.512 135.00301 151.701 169.38901 184.965" y="0" id="tspan1950">Control Signal</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text1952"><tspan x="0 18.809999 36.431999 54.119999 65.669998 77.087997 94.709999 102.201 110.88 127.512 135.00301 151.701 169.38901 184.965" y="0" id="tspan1950">控制信号</tspan></text>
         </g>
       </g>
     </g>
@@ -984,7 +984,7 @@
     <g id="g1988">
       <g id="g1990" clip-path="url(#clipPath1994)">
         <g id="g1996" transform="translate(957.3931,780.1781)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2000"><tspan x="0 16.632 24.122999 50.622002 68.112 75.602997 91.179001 102.729 110.22 127.842" y="0" id="tspan1998">Simulation</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2000"><tspan x="0 16.632 24.122999 50.622002 68.112 75.602997 91.179001 102.729 110.22 127.842" y="0" id="tspan1998">模拟</tspan></text>
         </g>
       </g>
     </g>
@@ -995,7 +995,7 @@
         </g>
         <g id="g2016" transform="translate(971.6241,603.889)"/>
         <g id="g2018" transform="translate(974.2561,574.189)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2022"><tspan x="0 14.112 20.468 42.952 57.792 64.148003 77.363998 87.164001 102.116" y="0" id="tspan2020">Simulator</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2022"><tspan x="0 14.112 20.468 42.952 57.792 64.148003 77.363998 87.164001 102.116" y="0" id="tspan2020">模拟器</tspan></text>
         </g>
       </g>
     </g>
@@ -1079,7 +1079,7 @@
     <g id="g2306">
       <g id="g2308" clip-path="url(#clipPath2312)">
         <g id="g2314" transform="translate(1357.739,406.34)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2318"><tspan x="0 18.284 29.903999 43.903999 53.591999" y="0" id="tspan2316">Users</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2318"><tspan x="0 18.284 29.903999 43.903999 53.591999" y="0" id="tspan2316">用户</tspan></text>
         </g>
       </g>
     </g>
@@ -1093,7 +1093,7 @@
     <g id="g2332">
       <g id="g2334" clip-path="url(#clipPath2338)">
         <g id="g2340" transform="translate(1330.506,789.8542)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2344"><tspan x="0 21.450001 37.026001 48.576 64.152 72.831001 91.640999 109.263 116.754 124.245 140.745 155.892 167.442 174.933 192.55499" y="0" id="tspan2342">Data Collection</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2344"><tspan x="0 21.450001 37.026001 48.576 64.152 72.831001 91.640999 109.263 116.754 124.245 140.745 155.892 167.442 174.933 192.55499" y="0" id="tspan2342">数据收集</tspan></text>
         </g>
       </g>
     </g>
@@ -1125,14 +1125,14 @@
     <g id="g2390">
       <g id="g2392" clip-path="url(#clipPath2396)">
         <g id="g2398" transform="translate(710.9803,670.7673)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2402"><tspan x="0 15.484 29.483999 39.452 48.495998 63.448002 73.136002 95.620003 108.836 123.844 136.444" y="0" id="tspan2400">Performance</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2402"><tspan x="0 15.484 29.483999 39.452 48.495998 63.448002 73.136002 95.620003 108.836 123.844 136.444" y="0" id="tspan2400">性能</tspan></text>
         </g>
       </g>
     </g>
     <g id="g2404">
       <g id="g2406" clip-path="url(#clipPath2410)">
         <g id="g2412" transform="translate(728.1303,618.7057)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2416"><tspan x="0 15.624 28.84 35.195999 41.551998 56.812 70.028 79.828003 86.183998 101.136" y="0" id="tspan2414">Validation</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:28px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2416"><tspan x="0 15.624 28.84 35.195999 41.551998 56.812 70.028 79.828003 86.183998 101.136" y="0" id="tspan2414">验证</tspan></text>
         </g>
       </g>
     </g>
@@ -1159,7 +1159,7 @@
     <g id="g2458">
       <g id="g2460" clip-path="url(#clipPath2464)">
         <g id="g2466" transform="translate(1266.331,592.7057)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2470"><tspan x="0 17.028 28.445999 46.068001 63.756001 75.306 91.806 109.494 127.479 136.158 164.30701 180.80701 198.79201 212.487 219.978 231.528" y="0" id="tspan2468">Frontend Website</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2470"><tspan x="0 17.028 28.445999 46.068001 63.756001 75.306 91.806 109.494 127.479 136.158 164.30701 180.80701 198.79201 212.487 219.978 231.528" y="0" id="tspan2468">前端网站</tspan></text>
         </g>
       </g>
     </g>
@@ -1184,7 +1184,7 @@
     <g id="g2506">
       <g id="g2508" clip-path="url(#clipPath2512)">
         <g id="g2514" transform="translate(1330.71,656.2306)">
-          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2518"><tspan x="0 17.028 33.528 50.028 68.013 85.998001 101.574 116.424" y="0" id="tspan2516">Feedback</tspan></text>
+          <text xml:space="preserve" transform="scale(1,-1)" style="font-variant:normal;font-weight:normal;font-size:33px;writing-mode:lr-tb;fill:#FFF;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text2518"><tspan x="0 17.028 33.528 50.028 68.013 85.998001 101.574 116.424" y="0" id="tspan2516">反馈</tspan></text>
         </g>
       </g>
     </g>
