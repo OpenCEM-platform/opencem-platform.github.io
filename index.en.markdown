@@ -1,6 +1,6 @@
 ---
 title: OpenCEM
-subtitle: Open In-Context Energy Management Platform
+subtitle: **Open** In-**C**ontext **E**nergy **M**anagement Platform
 layout: default
 permalink: /
 page_id: index
