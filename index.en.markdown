@@ -23,4 +23,4 @@ the processing of user-generated context.
 <img src="/assets/images/OpenCEM.en.svg" 
      alt="OpenCEM-overview" 
      class="OpenCEM-overview"
-     style="max-width: 100%; height: auto;">
+     style="max-width: 45%; height: auto; margin-left:auto;margin-right:auto;display:block;">

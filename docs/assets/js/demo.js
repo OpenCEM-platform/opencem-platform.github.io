@@ -14,18 +14,20 @@ async function submitUserData() {
             return;
         }
 
-        if (!event) {
+        if (false && !event) {
             alert("Event description cannot be empty. Please provide details about the event.");
             return;
         }
 
         const mockData = getMockData();
 
-        document.getElementById("predictionText").innerText = mockData.prediction;
         document.getElementById("results").style.display = "block";
         document.getElementById("feedback").style.display = "block";
 
         renderCharts(mockData);
+        renderAll();
+        //renderEnergyMix(ApiData());
+        //renderBatteryLevel(ApiData());
     } catch (error) {
         alert('Failed to fetch prediction data. Please try again later.');
         console.error(error);
@@ -34,6 +36,46 @@ async function submitUserData() {
         button.disabled = false;
     }
 }
+
+const context = [
+    {'start': 7, 'end': 9,
+     'context': "Weekday undergraduate orientation keynote in Main Auditorium—hundreds of attendees plug in together",
+     'source': 1, 'load': 3},
+    {'start': 12, 'end': 14, 'context': "Midday conference plenary in Conference Center—guest vehicles arrive en masse",
+     'source': 2, 'load': 3},
+    {'start': 17, 'end': 19,
+     'context': "Evening VIP banquet at Campus Banquet Hall—steady high turnover at charging bays", 'source': 3,
+     'load': 3},
+    {'start': 8, 'end': 18, 'context': "All-day multi-track academic symposium—continuous heavy use throughout campus",
+     'source': 4, 'load': 3},
+    {'start': 9, 'end': 17, 'context': "Peak daytime hours during any large campus event", 'source': 5, 'load': 3},
+    {'start': 10, 'end': 12, 'context': "Mid-morning breakout sessions at Symposium Wing—steady attendee trickle",
+     'source': 1, 'load': 2},
+    {'start': 14, 'end': 16, 'context': "Afternoon workshop block in Engineering Building—moderate, predictable use",
+     'source': 2, 'load': 2},
+    {'start': 16, 'end': 18, 'context': "Pre-dinner networking reception—guests top up before evening programs",
+     'source': 3, 'load': 2},
+    {'start': 11, 'end': 19, 'context': "Daytime hours on most weekdays when classes and small events overlap",
+     'source': 4, 'load': 2},
+    {'start': 13, 'end': 15, 'context': "Lunchtime period during a typical campus day", 'source': 5, 'load': 2},
+    {'start': 0, 'end': 6, 'context': "Overnight on weekdays—only resident students’ trickle charging", 'source': 1,
+     'load': 1},
+    {'start': 6, 'end': 8, 'context': "Early-morning window before the first lectures—minimal campus traffic",
+     'source': 2, 'load': 1},
+    {'start': 20, 'end': 23, 'context': "Late-evening after most events—few vehicles charging", 'source': 3, 'load': 1},
+    {'start': 13, 'end': 14, 'context': "Single lunchtime hour outside of event periods", 'source': 4, 'load': 1},
+    {'start': 0, 'end': 23, 'context': "General off-peak period with no scheduled events", 'source': 5, 'load': 1}
+];
+
+function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+document.addEventListener('readystatechange', () => {
+    const source = getRandomInteger(1, 5);
+    const load = getRandomInteger(1,3);
+    document.getElementById('userEvent').value = context.reduce( (p, c) => p + (c.source == source && c.load == load ? c.context + ' ' : ''), '');
+});
 
 // add dataset api here //
 function getMockData() {
@@ -61,10 +103,10 @@ function ApiData() {
 }
 
 function renderCharts(data) {
-    renderWeatherChart(data.weather);
-    renderEnergyPie(data.energy_mix);
-    renderUsageTrend(data.usage_trend);
-    renderEfficiencyGauge(data.cop);
+    //(data.weather);
+    //renderEnergyPie(data.energy_mix);
+    //renderUsageTrend(data.usage_trend);
+    //renderEfficiencyGauge(data.cop);
 }
 
 const partialSums = (arr, init = 0) => {
@@ -74,26 +116,157 @@ const partialSums = (arr, init = 0) => {
       }, []);
     };
 
+async function renderAll() {
+    console.log({
+                    context: document.getElementById('userEvent').value
+                });
+    const response = await fetch("http://10.22.16.23/simulate/simulate",
+        {
+            method: 'post',
+            body: JSON.stringify({
+                    context: document.getElementById('userEvent').value
+                })
+        });
+    const api_data = await response.json();
+    renderEnergyMix(api_data);
+    renderBatteryLevel(api_data);
+    renderActualLoad(api_data);
+    renderEnergyPie(api_data);
+    document.getElementById('context-out').innerHTML = '<p>' + api_data.context + '</p>';
+    document.getElementById('context').style.display = 'block';
+    document.getElementById("predictionText").innerHTML = 
+            '<p>Predicted energy usage based on context: ' + Math.round(api_data.p_load_forecast_kw_pred.reduce((p, v) => p + v, 0)) + '.</p>'
+          + '<p>Actual energy usage: ' + Math.round(api_data.p_load_forecast_kw.reduce((p, v) => p + v, 0)) + '.</p>';
+}
+
+function renderActualLoad(api_data) {
+    const labels = api_data.forecast_times.map(ts => Date.parse(ts));
+    const datasets = [
+        {
+            label: "Predicted Load",
+            data: api_data.p_load_forecast_kw_pred,
+            borderColor: 'rgba(108, 178, 235, 1)',
+            backgroundColor: 'rgba(178, 178, 178, 0.5)'
+        },
+        {
+            label: "Actual Load",
+            data: api_data.p_load_forecast_kw,
+            borderColor: 'rgba(178, 105, 235, 1)',
+            backgroundColor: 'rgba(178, 178, 178, 0.5)'
+        },
+    ];
+    const data = { labels : labels, datasets : datasets };
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            scales: {
+                x: { type: 'timeseries' },
+                y: { suggestedMin: 0, position: 'left', display: true, title: { text: 'in kWh', display: true } }
+            }        
+        }
+    };
+    const ctx = document.getElementById('predictionVsActualLoadChart').getContext('2d');
+    new Chart(ctx, config);
+    document.getElementById('predictionVsActualLoad').style.display = 'block';
+}
+
+function renderBatteryLevel(api_data) {
+    const labels = api_data.forecast_times.map(ts => Date.parse(ts));
+    const datasets = [
+        {
+            label: "Battery SoC",
+            data: api_data.battery_level,
+            borderColor: 'rgba(108, 178, 235, 1)',
+            backgroundColor: 'rgba(178, 178, 178, 0.5)',
+            yAxisID: 'y'
+        },
+        {
+            label: "Energy Buying Cost",
+            data: partialSums(api_data.energy_prices.map((p, i) => p * api_data.p_buy_control_kw[i])),
+            borderColor: 'rgba(178, 105, 235, 1)',
+            backgroundColor: 'rgba(178, 178, 178, 0.5)',
+            yAxisID: 'y1'
+        },
+    ];
+    const data = { labels : labels, datasets : datasets };
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            scales: {
+                x: { type: 'timeseries' },
+                y: { suggestedMin: 0, position: 'left', display: true, title: { text: 'in kWh', display: true } },
+                y1: { position: 'right', display: true, title: { text: 'in CNY', display: true } }
+            }        
+        }
+    };
+    const ctx = document.getElementById('batteryLevelChart').getContext('2d');
+    new Chart(ctx, config);
+    document.getElementById('resultText').innerHTML += '<p>Total cost incurred: '
+        + Math.round(100 * partialSums(api_data.energy_prices.map((p, i) => p * api_data.p_buy_control_kw[i]))[23]) / 100
+        +' CNY</p>';
+    document.getElementById('resultText').innerHTML += '<p>Optimal cost: '
+        + Math.round(100 * partialSums(api_data.energy_prices.map((p, i) => p * api_data.p_buy_control_kw_opt[i]))[23]) / 100
+        +' CNY</p>';
+}
+
 function renderEnergyMix(api_data) {
-    var x_times = api_data.forecast_times.forEach(ts => Date.parse(ts));
-    datasets: [
+    const labels = api_data.forecast_times.map(ts => Date.parse(ts));
+    const datasets = [
+        {
+            label: "PV Energy Generation",
+            data: api_data.p_gen_forecast_kw,
+            borderColor: 'rgba(235, 235, 108, 1)',
+            backgroundColor: 'rgba(178, 178, 178, 0.5)',
+            stack: 'stack1',
+            fill: 'origin'
+        },
+        {
+            label: "Energy Bought from Grid",
+            data: api_data.p_buy_control_kw,
+            borderColor: 'rgba(178, 108, 235, 1)',
+            backgroundColor: 'rgba(178, 178, 178, 0.5)',
+            stack: 'stack1',
+            fill: 0
+        },
         {
             label: "Energy Usage",
             data: api_data.p_load_forecast_kw,
-            borderColor: Utils.CHART_COLORS.red,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red),
+            borderColor: 'rgba(235, 108, 108, 1)',
+            backgroundColor: 'rgba(235, 108, 108, 0.5)',
             stack: undefined,
-            fill: 'origin'
-        },
+            fill: {above: 'red', below: 'green', target: 1}
+        }/*,
         {
-            label: "PV Energy Generation",
-            data: api_data.p_load_forecast_kw,
-            borderColor: Utils.CHART_COLORS.red,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red),
-            stack: undefined,
-            fill: 'origin'
-        },
-    ]
+            label: "Energy Usage Predicted",
+            data: api_data.p_load_forecast_kw_pred,
+            borderColor: 'rgba(235, 108, 235, 1)',
+            backgroundColor: 'rgba(235, 108, 235, 0.5)',
+            stack: 'stack2'
+        }*/
+    ];
+    const data = { labels : labels, datasets : datasets };
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            scales: {
+                y: { stacked: true, title: { display: true, text: 'in kWh' } },
+                x: { type: 'timeseries' }
+            },
+            plugins: {
+                filler: {
+                    propagate: false
+                },
+                'samples-filler-analyser': {
+                    target: 'chart-analyser'
+                }
+            },
+        }
+    };
+    const ctx = document.getElementById('energyStackChart').getContext('2d');
+    new Chart(ctx, config);
 }
 
 function renderWeatherChart(weatherData) {
@@ -148,7 +321,14 @@ function renderWeatherChart(weatherData) {
     document.getElementById('windSpeed').textContent = `${weatherData.current.wind} km/h`;
 }
 
-function renderEnergyPie(energyData) {
+function renderEnergyPie(api_data) {
+    const batteryChange = api_data.battery_level[23] - api_data.initial_charge_kwh;
+    const energyData = {
+            'labels' : ['Solar', 'Grid'],
+            'values' : [ api_data.p_gen_forecast_kw.reduce((p, a) => p + a, 0), api_data.p_buy_control_kw.reduce((p, a) => p + a, 0) ]
+        };
+
+    energyData.values = energyData.values.map(v => Math.round(100 * v / energyData.values.reduce((p, a) => p + a, 0)))
     const ctx = document.getElementById('energyPieChart').getContext('2d');
     new Chart(ctx, {
         type: 'pie',
@@ -170,6 +350,7 @@ function renderEnergyPie(energyData) {
             }
         }
     });
+    document.getElementById('resultText').innerHTML += '<p>Battery level change: ' + Math.round(batteryChange * 100) / 100 + ' kWh</p>';
 }
 
 function renderUsageTrend(trendData) {

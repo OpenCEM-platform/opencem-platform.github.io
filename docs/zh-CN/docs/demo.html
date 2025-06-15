@@ -62,22 +62,71 @@
 <div class="input-section">
       <h2>Scenario Input</h2>
       <label>Your Location (District Level)</label>
-      <input type="text" id="userLocation" placeholder="e.g.: Chaoyang District, Beijing" />
+      <input type="text" id="userLocation" placeholder="e.g.: CUHKsz, Teaching Building A" value="Teaching Building A" />
       
       <label>Upcoming Event Description</label>
-      <textarea id="userEvent" rows="4" placeholder="e.g.: Business trip for 4 days"></textarea>
+      <textarea id="userEvent" rows="4" placeholder="e.g.: Major conference with external guests visiting the campus by car on 2025/06/13 10 am to 3 pm."></textarea>
 
       <button class="submit-button" onclick="submitUserData()">
           <span>Run Prediction</span>
       </button>
   </div>
+<div id="context" class="feedback-section" style="display:none;">
+      <h2>Context used in Control</h2>
+      <div id="context-out"></div>
+  </div>
+<div class="chart-card" id="predictionVsActualLoad" style="display:none;">
+      <h3>Prediction and Actual Load</h3>
+      <div class="canvas-container">
+          <canvas id="predictionVsActualLoadChart"></canvas>
+      </div>
+  </div>
 <p><!-- Results Display --></p>
 <div class="results-section" id="results" style="display: none;">
       <h2>Prediction Results</h2>
-      <p id="predictionText"></p>
+      <div id="predictionText"></div>
       
       <div class="data-grid">
-          <!-- Weather Card -->
+          <!-- Energy Line Stack Chart -->
+          <div class="chart-card" style="grid-column: span 2">
+              <h3>Power Usage and Generation</h3>
+              <div class="canvas-container">
+                  <canvas id="energyStackChart"></canvas>
+              </div>
+              <p><span style="color:green">■</span>: Battery charging, <span style="color:red">■</span>: Battery discharging</p>
+          </div>
+
+          <!-- Energy Mix Card -->
+          <div class="chart-card">
+              <h3>Energy Generation</h3>
+              <div class="canvas-container">
+                  <canvas id="energyPieChart"></canvas>
+              </div>
+          </div>
+          
+        <!-- Battery Level Line Chart -->
+          <div class="chart-card" style="grid-column: span 2">
+              <h3>Battery SoC and Cost</h3>
+              <div class="canvas-container">
+                  <canvas id="batteryLevelChart"></canvas>
+              </div>
+          </div>
+
+          <div class="chart-card">
+              <h3>Results</h3>
+              <div id="resultText" class="canvas-container">
+              </div>
+          </div>
+
+          <!-- Efficiency Card 
+          <div class="chart-card">
+              <h3>AC Efficiency</h3>
+              <div class="gauge-container">
+                  <canvas id="efficiencyGauge"></canvas>
+                  <div class="gauge-label">COP: <span id="copValue"></span></div>
+              </div>
+          </div>
+           Weather Card 
           <div class="chart-card">
               <h3>Real-time Weather</h3>
               <div class="canvas-container">
@@ -88,32 +137,8 @@
                   <span id="humidity"></span>
                   <span id="windSpeed"></span>
               </div>
-          </div>
+          </div>-->
 
-          <!-- Energy Mix Card -->
-          <div class="chart-card">
-              <h3>Energy Consumption</h3>
-              <div class="canvas-container">
-                  <canvas id="energyPieChart"></canvas>
-              </div>
-          </div>
-
-          <!-- Usage Trend Card -->
-          <div class="chart-card" style="grid-column: span 2">
-              <h3>Power Usage Trend</h3>
-              <div class="canvas-container">
-                  <canvas id="usageTrendChart"></canvas>
-              </div>
-          </div>
-
-          <!-- Efficiency Card -->
-          <div class="chart-card">
-              <h3>AC Efficiency</h3>
-              <div class="gauge-container">
-                  <canvas id="efficiencyGauge"></canvas>
-                  <div class="gauge-label">COP: <span id="copValue"></span></div>
-              </div>
-          </div>
       </div>
   </div>
 
@@ -160,6 +185,8 @@
 
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
     
     <script src="/assets/js/demo.js"></script>
 </body>
