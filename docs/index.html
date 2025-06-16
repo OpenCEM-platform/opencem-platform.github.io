@@ -29,7 +29,7 @@
         </a></li>
       
         <li><a href="/team.html" class="nav-link ">
-          Our Team
+          Team
         </a></li>
       
         <li><a href="/demo.html" class="nav-link ">
@@ -57,7 +57,8 @@
     <div class="main-content">
         <section class="hero">
             <h1>OpenCEM</h1>
-            <p class="tagline">Open In-Context Energy Management Platform</p>
+            <p class="tagline"><p><strong>Open</strong> In-<strong>C</strong>ontext <strong>E</strong>nergy <strong>M</strong>anagement Platform</p>
+</p>
         </section>
 
         <!-- content -->
@@ -71,11 +72,54 @@ encourage user-generated context data. The installation is expected
 to start operation in Summer 2025 with first data publications planned 
 for Fall 2025.</p>
 
+<h2 id="context-aware-energy-management"><strong>Context-Aware Energy Management</strong></h2>
+
+<p>Our project introduces a novel approach to optimizing energy systems by leveraging the reasoning ability of Large Language Models (LLMs) to interpret and act on real-world contextual information. This method allows for more adaptive and intelligent decision-making in dynamic environments.</p>
+
+<p>At its core, the system operates as follows:</p>
+
+<ol>
+  <li>
+    <p><strong>Contextual Input</strong>: The process begins by feeding the system a “context description”. This can be any relevant information about the current or anticipated state of the energy system, such as “a sunny afternoon with high energy demand” or “a cloudy morning with forecasted grid instability”.</p>
+  </li>
+  <li>
+    <p><strong>Scenario Probability Generation</strong>: An LLM then processes this context to generate a set of possible future scenarios, each with an assigned probability. For example, a “sunny afternoon” context might lead to a high probability of abundant solar power generation.</p>
+  </li>
+  <li>
+    <p><strong>Optimal Control Calculation</strong>: The system then calculates the optimal charging or discharging strategy for the battery storage system based on a weighted average of all generated scenarios. This is achieved using a classical linear programming algorithm.</p>
+  </li>
+  <li>
+    <p><strong>Performance Comparison</strong>: To validate the effectiveness of this context-aware approach, we compare the cost-effectiveness of our method against the “perfect information” scenario, where the future is known. The more specific the initial context, the closer our model’s performance is to the theoretical optimum. This demonstrates the value of providing detailed and accurate contextual information.</p>
+  </li>
+</ol>
+
+<h3 id="why-contextual-decision-making-matters"><strong>Why Contextual Decision-Making Matters</strong></h3>
+
+<p>In the real world, managing energy resources is a complex task. Traditional methods (such as MPC) often rely on rigid models that struggle to adapt to unforeseen events. Contextual decision-making offers two significant advantages:</p>
+
+<ul>
+  <li><em>Enhanced Predictions</em>: By incorporating a wide range of contextual data, our system can make more accurate predictions about future energy supply and demand. This leads to more efficient use of stored energy and reduced operational costs.</li>
+  <li><em>Seamless Adaptation</em>: The use of an LLM allows the system to be highly adaptable. It can easily incorporate new types of information or adjust to new scenarios without needing to be completely reprogrammed.</li>
+</ul>
+
+<h3 id="our-vision-an-open-source-ecosystem-for-sustainable-energy"><strong>Our Vision: An Open-Source Ecosystem for Sustainable Energy</strong></h3>
+
+<p>Our ultimate ambition extends beyond this single application. We are committed to building a comprehensive, real-world environment for sustainable energy research and development.</p>
+
+<p>We are developing an <strong>open simulator API</strong> that will allow researchers, developers, and hobbyists to test their own energy management algorithms in a realistic and accessible setting. This will foster innovation and collaboration in the field of sustainable energy.</p>
+
+<p>Looking further ahead, we aim to construct a <strong>“world model”</strong> for critical energy infrastructure. This advanced simulation environment will serve as a digital twin of real-world energy systems, enabling the development of highly intelligent decision-making tools to ensure the stability and efficiency of our energy future.</p>
+
 <p>Please find more details on the planned scope in our project 
 <a href="/introduction.html">introduction</a> and the <a href="/demo.html">demo</a> for 
 the processing of user-generated context.</p>
 
-<p><img src="/assets/images/OpenCEM.en.svg" alt="OpenCEM-overview" class="OpenCEM-overview" style="max-width: 45%; height: auto; margin-left:auto;margin-right:auto;display:block;" /></p>
+<figure class="OpenCEM-overview-figure" style="max-width: 45%; margin: auto;">
+  <img src="/assets/images/OpenCEM.en.svg" alt="An overview of the OpenCEM platform, showing the interaction between the environment, agent, and monitoring tools." class="OpenCEM-overview" style="width: 100%; height: auto; display: block;" />
+  <figcaption style="text-align: center; padding-top: 10px; font-style: italic;">
+    Our open-source simulator in action, visualizing the real-time charging and discharging of a battery energy storage system. This tool allows researchers to test and validate their energy management algorithms in a realistic virtual environment.
+  </figcaption>
+</figure>
 
         </div>
     </div>
