@@ -24,3 +24,17 @@ The information will be made available through a public API.
 
 This page will be updated with downloads of the data set and API 
 documentation in the future as data becomes available.
+
+<figure class="OpenCEM-installation-photos" style="max-width: 90%; margin: auto;">
+  <img src="/assets/images/installation_1.webp"
+       alt="A photo of a PV array on top of a campus building."
+       class="OpenCEM-overview"
+       style="width: 49%; height: auto; display: inline-block;">
+  <img src="/assets/images/installation_2.webp"
+       alt="A photo of a PV array on top of a campus building."
+       class="OpenCEM-overview"
+       style="width: 49%; height: auto; display: inline-block;">
+  <figcaption style="text-align: center; padding-top: 10px; font-style: italic;">
+    Photos of the PV array that is being installed on campus.  
+  </figcaption>
+</figure>
