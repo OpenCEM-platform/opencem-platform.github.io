@@ -52,11 +52,14 @@ Please find more details on the planned scope in our project
 the processing of user-generated context.
 
 
-<figure class="OpenCEM-overview-figure" style="max-width: 45%; margin: auto;">
+<figure class="OpenCEM-overview-figure" style="width: 95%; margin: auto;">
   <img src="/assets/images/OpenCEM.en.svg" 
        alt="An overview of the OpenCEM platform, showing the interaction between the environment, agent, and monitoring tools." 
        class="OpenCEM-overview"
-       style="width: 100%; height: auto; display: block;">
+       style="width: 49%; height: auto; display: inline-block;">
+  <video style="width:49%; height: auto; display: inline-block" controls>
+    <source src="/assets/videos/opencem_intro.mp4" type="video/mp4">
+  </video>
   <figcaption style="text-align: center; padding-top: 10px; font-style: italic;">
     Our open-source simulator in action, visualizing the real-time charging and discharging of a battery energy storage system. This tool allows researchers to test and validate their energy management algorithms in a realistic virtual environment.
   </figcaption>
