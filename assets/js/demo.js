@@ -128,13 +128,23 @@ const partialSums = (arr, init = 0) => {
       }, []);
     };
 
+var energy_mix_chart = undefined, battery_level_chart = undefined, actual_load_chart = undefined, energy_pie_chart = undefined;
+
 async function renderAll() {
     const api_data = await ApiData();
+    
+    if (typeof energy_mix_chart !== 'undefined')
+    {
+        energy_mix_chart.destroy();
+        battery_level_chart.destroy();
+        actual_load_chart.destroy();
+        energy_pie_chart.destroy();
+    }
 
-    renderEnergyMix(api_data);
-    renderBatteryLevel(api_data);
-    renderActualLoad(api_data);
-    renderEnergyPie(api_data);
+    energy_mix_chart = renderEnergyMix(api_data);
+    battery_level_chart = renderBatteryLevel(api_data);
+    actual_load_chart = renderActualLoad(api_data);
+    energy_pie_chart = renderEnergyPie(api_data);
     document.getElementById('context-out').innerHTML = '<p>' + api_data.context + '</p>';
     document.getElementById('context').style.display = 'block';
     document.getElementById("predictionText").innerHTML = 
@@ -170,8 +180,8 @@ function renderActualLoad(api_data) {
         }
     };
     const ctx = document.getElementById('predictionVsActualLoadChart').getContext('2d');
-    new Chart(ctx, config);
     document.getElementById('predictionVsActualLoad').style.display = 'block';
+    return new Chart(ctx, config);
 }
 
 function renderBatteryLevel(api_data) {
@@ -205,13 +215,13 @@ function renderBatteryLevel(api_data) {
         }
     };
     const ctx = document.getElementById('batteryLevelChart').getContext('2d');
-    new Chart(ctx, config);
-    document.getElementById('resultText').innerHTML += '<p>Total cost incurred: '
+    document.getElementById('resultText').innerHTML = '<p>Total cost incurred: '
         + Math.round(100 * partialSums(api_data.energy_prices.map((p, i) => p * api_data.p_buy_control_kw[i]))[23]) / 100
         +' CNY</p>';
     document.getElementById('resultText').innerHTML += '<p>Optimal cost: '
         + Math.round(100 * partialSums(api_data.energy_prices.map((p, i) => p * api_data.p_buy_control_kw_opt[i]))[23]) / 100
         +' CNY</p>';
+    return new Chart(ctx, config);
 }
 
 function renderEnergyMix(api_data) {
@@ -269,7 +279,7 @@ function renderEnergyMix(api_data) {
         }
     };
     const ctx = document.getElementById('energyStackChart').getContext('2d');
-    new Chart(ctx, config);
+    return new Chart(ctx, config);
 }
 
 function renderWeatherChart(weatherData) {
@@ -333,7 +343,8 @@ function renderEnergyPie(api_data) {
 
     energyData.values = energyData.values.map(v => Math.round(100 * v / energyData.values.reduce((p, a) => p + a, 0)))
     const ctx = document.getElementById('energyPieChart').getContext('2d');
-    new Chart(ctx, {
+    document.getElementById('resultText').innerHTML += '<p>Battery level change: ' + Math.round(batteryChange * 100) / 100 + ' kWh</p>';
+    return new Chart(ctx, {
         type: 'pie',
         data: {
             labels: energyData.labels.map((label, i) => `${label} ${energyData.values[i]}%`),
@@ -353,12 +364,11 @@ function renderEnergyPie(api_data) {
             }
         }
     });
-    document.getElementById('resultText').innerHTML += '<p>Battery level change: ' + Math.round(batteryChange * 100) / 100 + ' kWh</p>';
 }
 
 function renderUsageTrend(trendData) {
     const ctx = document.getElementById('usageTrendChart').getContext('2d');
-    new Chart(ctx, {
+    return new Chart(ctx, {
         type: 'bar',
         data: {
             labels: trendData.days,
